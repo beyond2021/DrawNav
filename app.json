@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/white_logo_transparent_background.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#7F23D9"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,5 +22,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
+    
   }
 }

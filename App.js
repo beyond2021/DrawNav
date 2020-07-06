@@ -8,8 +8,14 @@ import { Dimensions } from "react-native";
 
 import { Feather } from "@expo/vector-icons";
 
+import {decode, encode} from 'base-64';
+if (!global.btoa) {  global.btoa = encode }
+
+if (!global.atob) { global.atob = decode } 
+
 import {
   ProfileScreen,
+  HomeScreen,
   MessageScreen,
   ActivityScreen,
   ListScreen,
@@ -26,6 +32,13 @@ const DrawerNavigator = createDrawerNavigator({
     navigationOptions: {
       title: "Profile",
       drawerIcon:({tintColor}) => <Feather name="user" size={16} color={tintColor} />
+    }
+  },
+  HomeScreen: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: "Home",
+      drawerIcon:({tintColor}) => <Feather name="list" size={16} color={tintColor} />
     }
   },
   MessageScreen: {
